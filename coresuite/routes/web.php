@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\Frontend\HomeController::class, 'show']);
 
 Route::get('select2front', [\App\Http\Controllers\Backend\Select2::class, 'response']);
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok'], 200);
+});
 
 
 Route::get('/logout', [\App\Http\Controllers\LogOut::class, 'logOut']);
