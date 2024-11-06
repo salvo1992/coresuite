@@ -19,8 +19,15 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Copia il progetto Laravel nel container
 COPY . /var/www/html
 
-# Copia il file .env.example come .env
-COPY .env.example /var/www/html/.env
+# Crea dinamicamente il file .env utilizzando le variabili di ambiente di Render
+RUN echo "APP_ENV=production" > /var/www/html/.env && \
+    echo "APP_KEY=${APP_KEY}" >> /var/www/html/.env && \
+    echo "DB_CONNECTION=mysql" >> /var/www/html/.env && \
+    echo "DB_HOST=${DB_HOST}" >> /var/www/html/.env && \
+    echo "DB_PORT=${DB_PORT}" >> /var/www/html/.env && \
+    echo "DB_DATABASE=${DB_DATABASE}" >> /var/www/html/.env && \
+    echo "DB_USERNAME=${DB_USERNAME}" >> /var/www/html/.env && \
+    echo "DB_PASSWORD=${DB_PASSWORD}" >> /var/www/html/.env
 
 # Installa le dipendenze del progetto Laravel
 RUN composer install --no-dev --optimize-autoloader --no-scripts
@@ -40,3 +47,4 @@ EXPOSE 80
 
 # Definisci il punto di ingresso per avviare Apache
 CMD ["apache2-foreground"]
+
