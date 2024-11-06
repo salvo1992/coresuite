@@ -47,11 +47,15 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # Genera la chiave dell'applicazione Laravel
 RUN php artisan key:generate || true
 
-# Abilita il modulo di Apache "rewrite"
+# Abilita il modulo di Apache "rewrite" e aggiorna la configurazione della root di Apache
 RUN a2enmod rewrite
+
+# Aggiorna il file di configurazione di Apache per puntare alla directory pubblica di Laravel
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 
 # Esponi la porta 80 per il traffico HTTP
 EXPOSE 80
 
 # Definisci il punto di ingresso per avviare Apache
 CMD ["apache2-foreground"]
+
