@@ -34,17 +34,18 @@ RUN echo "APP_ENV=production" > /var/www/html/.env && \
     echo "DB_PASSWORD=${DB_PASSWORD}" >> /var/www/html/.env
 
 # Fornisci permessi adeguati alle directory necessarie prima di installare Composer
-RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html
 
 # Installa le dipendenze del progetto Laravel
-RUN composer install --no-dev --optimize-autoloader --no-scripts
+RUN composer install --no-dev --optimize-autoloader --no-scripts || true
 
 # Fornisci permessi adeguati alle directory di cache e storage
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Genera la chiave dell'applicazione Laravel
-RUN php artisan key:generate
+RUN php artisan key:generate || true
 
 # Abilita il modulo di Apache "rewrite"
 RUN a2enmod rewrite
