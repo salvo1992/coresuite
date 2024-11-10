@@ -4,17 +4,17 @@
 <!--begin::Head-->
 <head>
     <base href=""/>
-    <title>gestiio</title>
+    <title>Coresuite</title>
     <meta charset="utf-8"/>
     <meta name="description" content="La tua web-based platform per le attivazioni."/>
     <meta name="keywords" content="tim, contratti, internet, tv, sky, fastweb, eolo, linkem, very, tiscali"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta property="og:locale" content="it_IT"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="gestiio"/>
-    <meta property="og:url" content="https://www.gestiio.it"/>
+    <meta property="og:title" content="Coresuite"/>
+    <meta property="og:url" content="https://www.coresuite.it"/>
     <meta property="og:site_name" content="Cavaliere Carmine"/>
-    <link rel="canonical" href="https://www.gestiio.it"/>
+    <link rel="canonical" href="https://www.coresuite.it"/>
     <link rel="shortcut icon" href="/images/logo_small_icon_only.png"/>
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>
@@ -1648,7 +1648,7 @@
                 </div>
                 <!--end::Content-->
                 <!--begin::Link-->
-                <a href="mailto:carmine@gestiio.it" class="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-2">Invia la richiesta</a>
+                <a href="mailto:carmine@coresuite.it" class="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-2">Invia la richiesta</a>
                 <!--end::Link-->
             </div>
             <!--end::Highlight-->
@@ -1681,7 +1681,7 @@
                             <!--end::Title-->
                             <!--begin::Text-->
                             <span class="fw-normal fs-4 text-gray-700">Inviaci una mail
-									<a href="mailto:info@gestiio.it" class="text-white opacity-50 text-hover-primary">info@gestiio.it</a></span>
+									<a href="mailto:info@coresuite.it" class="text-white opacity-50 text-hover-primary">info@coresuite.it</a></span>
                             <!--end::Text-->
                         </div>
                         <!--end::Block-->
@@ -1692,7 +1692,7 @@
                             <!--end::Title-->
                             <!--begin::Text-->
                             <span class="fw-normal fs-4 text-gray-700">Hai un servizio e vuoi integrarlo nella nostra piattaforma?
-									<a href="mailto:carmine@gestiio.it" class="text-white opacity-50 text-hover-primary">Contattaci qui</a></span>
+									<a href="mailto:carmine@coresuite.it" class="text-white opacity-50 text-hover-primary">Contattaci qui</a></span>
                             <!--end::Text-->
                         </div>
                         <!--end::Block-->
@@ -1775,7 +1775,7 @@
                     <!--begin::Copyright-->
                     <div class="d-flex align-items-center order-2 order-md-1">
                         <!--begin::Logo-->
-                        <a href="https://www.gestiio.it">
+                        <a href="https://www.coresuite.it">
                             <img alt="Logo" src="/images/logo_blu.png" class="h-15px h-md-20px"/>
                         </a>
                         <!--end::Logo image-->
