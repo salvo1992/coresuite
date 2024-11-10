@@ -78,7 +78,7 @@ class Handler extends ExceptionHandler
                 $mailable->replyTo(Auth::user()->email, Auth::user()->nominativo());
             }
             
-            Mail::to('andicot@gmail.com')->send($mailable);
+            Mail::to('salvatoted1992@gmail.com')->send($mailable);
         } catch (Exception $ex) {
             dd($ex);
         }
