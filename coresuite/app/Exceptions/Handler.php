@@ -68,18 +68,19 @@ class Handler extends ExceptionHandler
         }
 
     }
-
     public function sendEmail(Throwable $exception)
     {
         try {
             $mailable = new ExceptionMail($exception);
+            $mailable->from(env('MAIL_FROM_ADDRESS', 'tuonome@tuodominio.com'), env('MAIL_FROM_NAME', 'Nome Applicazione'));
+            
             if (Auth::check()) {
                 $mailable->replyTo(Auth::user()->email, Auth::user()->nominativo());
             }
+            
             Mail::to('andicot@gmail.com')->send($mailable);
         } catch (Exception $ex) {
             dd($ex);
         }
     }
-
 }
