@@ -139,7 +139,7 @@ return [
         Features::updateProfileInformation(),
         Features::updatePasswords(),
         //Features::twoFactorAuthentication(['confirmPassword' => true, 'window' => 3]),
-        (env('APP_NAME') == 'gestiio') ? Features::twoFactorAuthentication(['confirmPassword' => true, 'window' => 3]) : null,
+        (env('APP_NAME') == 'Coresuite') ? Features::twoFactorAuthentication(['confirmPassword' => true, 'window' => 3]) : null,
     ],
 
 ];

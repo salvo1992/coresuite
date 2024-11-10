@@ -51,7 +51,7 @@ return [
     'file_manager' => [
         'cartella' => '/file_manager',
     ],
-    'cartella_locale' => 'gestio',
+    'cartella_locale' => 'coresuite',
 
     'allegati_attivazioni_sim' => [
         'cartella' => '/allegati_attivazioni_sim',
@@ -69,13 +69,13 @@ return [
 
 //bk mail
 //MAIL_ENCRYPTION=ssl
-//MAIL_FROM_ADDRESS=noreply@gestiio.it
-//MAIL_FROM_NAME=Gestiio
+//MAIL_FROM_ADDRESS=noreply@coresuite.it
+//MAIL_FROM_NAME=Coresuite
 //MAIL_HOST=smtps.aruba.it
 //MAIL_MAILER=smtp
 //MAIL_PASSWORD=H00:00am
 //MAIL_PORT=465
-//MAIL_USERNAME=noreply@gestiio.it
+//MAIL_USERNAME=noreply@coresuite.it
 
 
 ];
