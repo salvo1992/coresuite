@@ -36,4 +36,3 @@ hooks:
         php artisan view:cache
 
 disk: 2048
-#
